@@ -1,0 +1,97 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_USB:FT232RL U?
+U 1 1 5FCB296D
+P 3450 2550
+F 0 "U?" H 3450 2650 50  0000 C CNN
+F 1 "FT232RL" H 3450 2550 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 4550 1650 50  0001 C CNN
+F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT232R.pdf" H 3450 2550 50  0001 C CNN
+	1    3450 2550
+	1    0    0    -1  
+$EndComp
+Text HLabel 4250 1850 2    50   Input ~ 0
+TX
+Text HLabel 4250 1950 2    50   Input ~ 0
+RX
+$Comp
+L power:VCC #PWR?
+U 1 1 5FCBE6F2
+P 3350 1550
+F 0 "#PWR?" H 3350 1400 50  0001 C CNN
+F 1 "VCC" H 3365 1723 50  0000 C CNN
+F 2 "" H 3350 1550 50  0001 C CNN
+F 3 "" H 3350 1550 50  0001 C CNN
+	1    3350 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FCBF2B2
+P 3550 1550
+F 0 "#PWR?" H 3550 1400 50  0001 C CNN
+F 1 "VCC" H 3565 1723 50  0000 C CNN
+F 2 "" H 3550 1550 50  0001 C CNN
+F 3 "" H 3550 1550 50  0001 C CNN
+	1    3550 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBF6BF
+P 3650 3550
+F 0 "#PWR?" H 3650 3300 50  0001 C CNN
+F 1 "GND" H 3655 3377 50  0000 C CNN
+F 2 "" H 3650 3550 50  0001 C CNN
+F 3 "" H 3650 3550 50  0001 C CNN
+	1    3650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBF96C
+P 3550 3550
+F 0 "#PWR?" H 3550 3300 50  0001 C CNN
+F 1 "GND" H 3555 3377 50  0000 C CNN
+F 2 "" H 3550 3550 50  0001 C CNN
+F 3 "" H 3550 3550 50  0001 C CNN
+	1    3550 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBFB79
+P 3450 3550
+F 0 "#PWR?" H 3450 3300 50  0001 C CNN
+F 1 "GND" H 3455 3377 50  0000 C CNN
+F 2 "" H 3450 3550 50  0001 C CNN
+F 3 "" H 3450 3550 50  0001 C CNN
+	1    3450 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCBFDEC
+P 3250 3550
+F 0 "#PWR?" H 3250 3300 50  0001 C CNN
+F 1 "GND" H 3255 3377 50  0000 C CNN
+F 2 "" H 3250 3550 50  0001 C CNN
+F 3 "" H 3250 3550 50  0001 C CNN
+	1    3250 3550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,1062 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:VCC #PWR?
+U 1 1 5F8323E6
+P 1600 700
+F 0 "#PWR?" H 1600 550 50  0001 C CNN
+F 1 "VCC" H 1615 873 50  0000 C CNN
+F 2 "" H 1600 700 50  0001 C CNN
+F 3 "" H 1600 700 50  0001 C CNN
+	1    1600 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F832A2B
+P 1600 3700
+F 0 "#PWR?" H 1600 3450 50  0001 C CNN
+F 1 "GND" H 1605 3527 50  0000 C CNN
+F 2 "" H 1600 3700 50  0001 C CNN
+F 3 "" H 1600 3700 50  0001 C CNN
+	1    1600 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F8BF761
+P 1800 6700
+F 0 "R?" V 1700 6650 50  0000 L CNN
+F 1 "10K" V 1800 6650 50  0000 L CNN
+F 2 "" V 1730 6700 50  0001 C CNN
+F 3 "~" H 1800 6700 50  0001 C CNN
+	1    1800 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5F8BF8B2
+P 1800 7150
+F 0 "C?" H 1915 7196 50  0000 L CNN
+F 1 "10uF" H 1915 7105 50  0000 L CNN
+F 2 "" H 1838 7000 50  0001 C CNN
+F 3 "~" H 1800 7150 50  0001 C CNN
+	1    1800 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F8BFD00
+P 1800 6550
+F 0 "#PWR?" H 1800 6400 50  0001 C CNN
+F 1 "VCC" H 1815 6723 50  0000 C CNN
+F 2 "" H 1800 6550 50  0001 C CNN
+F 3 "" H 1800 6550 50  0001 C CNN
+	1    1800 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F8C0198
+P 1500 6950
+F 0 "R?" V 1400 6950 50  0000 C CNN
+F 1 "10" V 1500 6950 50  0000 C CNN
+F 2 "" V 1430 6950 50  0001 C CNN
+F 3 "~" H 1500 6950 50  0001 C CNN
+	1    1500 6950
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5F8C30E9
+P 1150 6950
+F 0 "SW?" H 1150 7235 50  0000 C CNN
+F 1 "RESET" H 1150 7144 50  0000 C CNN
+F 2 "" H 1150 7150 50  0001 C CNN
+F 3 "~" H 1150 7150 50  0001 C CNN
+	1    1150 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C36B6
+P 900 7000
+F 0 "#PWR?" H 900 6750 50  0001 C CNN
+F 1 "GND" H 905 6827 50  0000 C CNN
+F 2 "" H 900 7000 50  0001 C CNN
+F 3 "" H 900 7000 50  0001 C CNN
+	1    900  7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  7000 900  6950
+Wire Wire Line
+	900  6950 950  6950
+Wire Wire Line
+	1800 6850 1800 6950
+Wire Wire Line
+	1650 6950 1800 6950
+Connection ~ 1800 6950
+Wire Wire Line
+	1800 6950 1800 7000
+$Comp
+L power:GND #PWR?
+U 1 1 5F8C3F40
+P 1800 7300
+F 0 "#PWR?" H 1800 7050 50  0001 C CNN
+F 1 "GND" H 1805 7127 50  0000 C CNN
+F 2 "" H 1800 7300 50  0001 C CNN
+F 3 "" H 1800 7300 50  0001 C CNN
+	1    1800 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4148 D?
+U 1 1 5F8C4542
+P 2050 6700
+F 0 "D?" H 2000 6600 50  0000 L CNN
+F 1 "1N4148" H 1900 6800 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2050 6525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 2050 6700 50  0001 C CNN
+	1    2050 6700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F8C5CC4
+P 2050 6550
+F 0 "#PWR?" H 2050 6400 50  0001 C CNN
+F 1 "VCC" H 2065 6723 50  0000 C CNN
+F 2 "" H 2050 6550 50  0001 C CNN
+F 3 "" H 2050 6550 50  0001 C CNN
+	1    2050 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U?
+U 1 1 5F8C6753
+P 2450 6950
+F 0 "U?" H 2450 7267 50  0000 C CNN
+F 1 "74LS14" H 2450 7176 50  0000 C CNN
+F 2 "" H 2450 6950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 2450 6950 50  0001 C CNN
+	1    2450 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS14 U?
+U 2 1 5F8C84EA
+P 3050 6950
+F 0 "U?" H 3050 7267 50  0000 C CNN
+F 1 "74LS14" H 3050 7176 50  0000 C CNN
+F 2 "" H 3050 6950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS14" H 3050 6950 50  0001 C CNN
+	2    3050 6950
+	1    0    0    -1  
+$EndComp
+Text Label 3350 7200 0    50   ~ 0
+RESET
+Text Label 3350 6950 0    50   ~ 0
+~RESET
+Wire Wire Line
+	3350 7200 2750 7200
+Wire Wire Line
+	2750 7200 2750 6950
+Connection ~ 2750 6950
+Wire Wire Line
+	1800 6950 2050 6950
+Wire Wire Line
+	2050 6850 2050 6950
+Connection ~ 2050 6950
+Wire Wire Line
+	2050 6950 2150 6950
+Wire Notes Line
+	600  6200 3650 6200
+Wire Notes Line
+	3650 6200 3650 7600
+Wire Notes Line
+	3650 7600 600  7600
+Wire Notes Line
+	600  7600 600  6200
+Text Notes 750  6450 0    79   Italic 0
+Reset circuit
+Text Label 900  1000 2    50   ~ 0
+~RESET
+$Comp
+L Oscillator:CXO_DIP14 X?
+U 1 1 5F8D5383
+P 4650 6850
+F 0 "X?" H 4900 6750 50  0000 L CNN
+F 1 "10MHz" H 5050 6750 50  0000 L CNN
+F 2 "Oscillator:Oscillator_DIP-14" H 5100 6500 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 4550 6850 50  0001 C CNN
+	1    4650 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8D6D11
+P 4650 7150
+F 0 "#PWR?" H 4650 6900 50  0001 C CNN
+F 1 "GND" H 4655 6977 50  0000 C CNN
+F 2 "" H 4650 7150 50  0001 C CNN
+F 3 "" H 4650 7150 50  0001 C CNN
+	1    4650 7150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 4350 6850
+$Comp
+L power:VCC #PWR?
+U 1 1 5F8D7321
+P 4650 6550
+F 0 "#PWR?" H 4650 6400 50  0001 C CNN
+F 1 "VCC" H 4665 6723 50  0000 C CNN
+F 2 "" H 4650 6550 50  0001 C CNN
+F 3 "" H 4650 6550 50  0001 C CNN
+	1    4650 6550
+	1    0    0    -1  
+$EndComp
+Text Label 4950 6850 0    50   ~ 0
+CPU_CLK
+$Comp
+L Oscillator:CXO_DIP14 X?
+U 1 1 5F8D7F95
+P 5900 6850
+F 0 "X?" H 6150 6750 50  0000 L CNN
+F 1 "7.3728MHz" H 6300 6750 50  0000 L CNN
+F 2 "Oscillator:Oscillator_DIP-14" H 6350 6500 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 5800 6850 50  0001 C CNN
+	1    5900 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F8D7F9F
+P 5900 7150
+F 0 "#PWR?" H 5900 6900 50  0001 C CNN
+F 1 "GND" H 5905 6977 50  0000 C CNN
+F 2 "" H 5900 7150 50  0001 C CNN
+F 3 "" H 5900 7150 50  0001 C CNN
+	1    5900 7150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5600 6850
+$Comp
+L power:VCC #PWR?
+U 1 1 5F8D7FAA
+P 5900 6550
+F 0 "#PWR?" H 5900 6400 50  0001 C CNN
+F 1 "VCC" H 5915 6723 50  0000 C CNN
+F 2 "" H 5900 6550 50  0001 C CNN
+F 3 "" H 5900 6550 50  0001 C CNN
+	1    5900 6550
+	1    0    0    -1  
+$EndComp
+Text Label 6200 6850 0    50   ~ 0
+UART_CLK
+$Comp
+L Interface_UART:MC68B50 U?
+U 1 1 5F8DAD5D
+P 8750 2100
+F 0 "U?" H 8750 2100 50  0000 C CNN
+F 1 "MC68B50" H 8350 900 50  0000 C CNN
+F 2 "Package_DIP:DIP-40_W15.24mm" H 8800 950 50  0001 L CNN
+F 3 "http://pdf.datasheetcatalog.com/datasheet/motorola/MC6850.pdf" H 8750 2100 50  0001 C CNN
+	1    8750 2100
+	1    0    0    -1  
+$EndComp
+Text Label 900  1300 2    50   ~ 0
+CPU_CLK
+Text Label 8200 2650 2    50   ~ 0
+UART_CLK
+Wire Wire Line
+	8200 2650 8250 2600
+Wire Wire Line
+	8200 2650 8250 2700
+$Comp
+L power:VCC #PWR?
+U 1 1 5F962174
+P 8750 800
+F 0 "#PWR?" H 8750 650 50  0001 C CNN
+F 1 "VCC" H 8765 973 50  0000 C CNN
+F 2 "" H 8750 800 50  0001 C CNN
+F 3 "" H 8750 800 50  0001 C CNN
+	1    8750 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F962A0D
+P 8750 3300
+F 0 "#PWR?" H 8750 3050 50  0001 C CNN
+F 1 "GND" H 8755 3127 50  0000 C CNN
+F 2 "" H 8750 3300 50  0001 C CNN
+F 3 "" H 8750 3300 50  0001 C CNN
+	1    8750 3300
+	1    0    0    -1  
+$EndComp
+Text Label 9150 1200 0    50   ~ 0
+~INT
+$Comp
+L power:VCC #PWR?
+U 1 1 5F97ADCD
+P 900 1600
+F 0 "#PWR?" H 900 1450 50  0001 C CNN
+F 1 "VCC" H 915 1773 50  0000 C CNN
+F 2 "" H 900 1600 50  0001 C CNN
+F 3 "" H 900 1600 50  0001 C CNN
+	1    900  1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F97BA0B
+P 750 1550
+F 0 "R?" V 650 1550 50  0000 L CNN
+F 1 "3K3" V 750 1500 50  0000 L CNN
+F 2 "" V 680 1550 50  0001 C CNN
+F 3 "~" H 750 1550 50  0001 C CNN
+	1    750  1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F97BE42
+P 750 1400
+F 0 "#PWR?" H 750 1250 50  0001 C CNN
+F 1 "VCC" H 650 1450 50  0000 C CNN
+F 2 "" H 750 1400 50  0001 C CNN
+F 3 "" H 750 1400 50  0001 C CNN
+	1    750  1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  1700 900  1700
+Text Label 650  1700 2    50   ~ 0
+~INT
+NoConn ~ 900  2100
+NoConn ~ 900  3400
+$Comp
+L power:VCC #PWR?
+U 1 1 5F98C55B
+P 900 3300
+F 0 "#PWR?" H 900 3150 50  0001 C CNN
+F 1 "VCC" H 800 3400 50  0000 C CNN
+F 2 "" H 900 3300 50  0001 C CNN
+F 3 "" H 900 3300 50  0001 C CNN
+	1    900  3300
+	1    0    0    -1  
+$EndComp
+NoConn ~ 900  2300
+$Comp
+L power:VCC #PWR?
+U 1 1 5F990B2F
+P 750 2200
+F 0 "#PWR?" H 750 2050 50  0001 C CNN
+F 1 "VCC" H 700 2350 50  0000 C CNN
+F 2 "" H 750 2200 50  0001 C CNN
+F 3 "" H 750 2200 50  0001 C CNN
+	1    750  2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	750  2200 900  2200
+Text Label 900  2000 2    50   ~ 0
+~M1
+Text Label 4100 1850 2    50   ~ 0
+A9
+Text Label 4100 1750 2    50   ~ 0
+A8
+Text Label 4100 1650 2    50   ~ 0
+A7
+Text Label 4100 1550 2    50   ~ 0
+A6
+Text Label 4100 1450 2    50   ~ 0
+A5
+Text Label 4100 1350 2    50   ~ 0
+A4
+Text Label 4100 1250 2    50   ~ 0
+A3
+Text Label 4100 1150 2    50   ~ 0
+A2
+Text Label 4100 1050 2    50   ~ 0
+A1
+Text Label 4100 950  2    50   ~ 0
+A0
+$Comp
+L Memory_RAM:628128_DIP32_SSOP32 U?
+U 1 1 5F9E5DC7
+P 4600 1750
+F 0 "U?" H 4600 1750 50  0000 C CNN
+F 1 "628128" H 4200 700 50  0000 C CNN
+F 2 "" H 4600 1750 50  0001 C CNN
+F 3 "http://www.futurlec.com/Datasheet/Memory/628128.pdf" H 4600 1750 50  0001 C CNN
+	1    4600 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FA02823
+P 4600 750
+F 0 "#PWR?" H 4600 600 50  0001 C CNN
+F 1 "VCC" H 4615 923 50  0000 C CNN
+F 2 "" H 4600 750 50  0001 C CNN
+F 3 "" H 4600 750 50  0001 C CNN
+	1    4600 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA02F2E
+P 4600 2750
+F 0 "#PWR?" H 4600 2500 50  0001 C CNN
+F 1 "GND" H 4605 2577 50  0000 C CNN
+F 2 "" H 4600 2750 50  0001 C CNN
+F 3 "" H 4600 2750 50  0001 C CNN
+	1    4600 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	650  1700 750  1700
+Connection ~ 750  1700
+$Comp
+L 74xx:74LS32 U?
+U 1 1 5FB3B054
+P 1300 4550
+F 0 "U?" H 1300 4550 50  0000 C CNN
+F 1 "74LS32" H 1300 4750 50  0000 C CNN
+F 2 "" H 1300 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1300 4550 50  0001 C CNN
+	1    1300 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U?
+U 2 1 5FB42BD8
+P 1300 4900
+F 0 "U?" H 1300 4900 50  0000 C CNN
+F 1 "74LS32" H 1600 4800 50  0000 C CNN
+F 2 "" H 1300 4900 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1300 4900 50  0001 C CNN
+	2    1300 4900
+	1    0    0    -1  
+$EndComp
+Text Label 1600 4550 0    50   ~ 0
+~IOWR
+$Comp
+L 74xx:74LS32 U?
+U 3 1 5FB5D442
+P 1300 5300
+F 0 "U?" H 1300 5300 50  0000 C CNN
+F 1 "74LS32" H 1600 5200 50  0000 C CNN
+F 2 "" H 1300 5300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1300 5300 50  0001 C CNN
+	3    1300 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U?
+U 4 1 5FB60818
+P 1300 5700
+F 0 "U?" H 1300 5700 50  0000 C CNN
+F 1 "74LS32" H 1300 5500 50  0000 C CNN
+F 2 "" H 1300 5700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1300 5700 50  0001 C CNN
+	4    1300 5700
+	1    0    0    -1  
+$EndComp
+Text Label 1600 4900 0    50   ~ 0
+~IORD
+Text Label 800  5800 0    50   ~ 0
+~RD
+Text Label 1600 5300 0    50   ~ 0
+~MEMWR
+Text Label 1600 5700 0    50   ~ 0
+~MEMRD
+$Comp
+L 74xx:74LS138 U?
+U 1 1 5FBB22ED
+P 2800 5200
+F 0 "U?" H 2800 5200 50  0000 C CNN
+F 1 "74LS138" H 2350 4600 50  0000 C CNN
+F 2 "" H 2800 5200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS138" H 2800 5200 50  0001 C CNN
+	1    2800 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 4900 2300 4900
+Wire Wire Line
+	2200 5000 2300 5000
+Wire Wire Line
+	2200 5100 2300 5100
+Text Label 2200 4900 0    50   ~ 0
+A3
+Text Label 2200 5000 0    50   ~ 0
+A4
+Text Label 2200 5100 0    50   ~ 0
+A5
+$Comp
+L power:VCC #PWR?
+U 1 1 5FBC9D21
+P 2300 5400
+F 0 "#PWR?" H 2300 5250 50  0001 C CNN
+F 1 "VCC" H 2315 5573 50  0000 C CNN
+F 2 "" H 2300 5400 50  0001 C CNN
+F 3 "" H 2300 5400 50  0001 C CNN
+	1    2300 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 5500 2300 5500
+Wire Wire Line
+	2200 5600 2300 5600
+Text Label 2200 5500 0    50   ~ 0
+A6
+Text Label 2200 5600 0    50   ~ 0
+A7
+Text Label 3300 4900 0    50   ~ 0
+~PORT0
+Text Label 3300 5600 0    50   ~ 0
+~PORT38
+Text Label 3300 5100 0    50   ~ 0
+~PORT10
+NoConn ~ 3300 5000
+NoConn ~ 3300 5200
+NoConn ~ 3300 5300
+NoConn ~ 3300 5400
+NoConn ~ 3300 5500
+$Comp
+L power:VCC #PWR?
+U 1 1 5FC02C86
+P 2800 4600
+F 0 "#PWR?" H 2800 4450 50  0001 C CNN
+F 1 "VCC" H 2650 4700 50  0000 C CNN
+F 2 "" H 2800 4600 50  0001 C CNN
+F 3 "" H 2800 4600 50  0001 C CNN
+	1    2800 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FC037A2
+P 2800 5900
+F 0 "#PWR?" H 2800 5650 50  0001 C CNN
+F 1 "GND" H 2805 5727 50  0000 C CNN
+F 2 "" H 2800 5900 50  0001 C CNN
+F 3 "" H 2800 5900 50  0001 C CNN
+	1    2800 5900
+	1    0    0    -1  
+$EndComp
+Text Label 4100 1950 2    50   ~ 0
+A10
+Text Label 4100 2050 2    50   ~ 0
+A11
+Text Label 4100 2150 2    50   ~ 0
+A12
+Text Label 4100 2250 2    50   ~ 0
+A13
+Text Label 4100 2350 2    50   ~ 0
+A14
+Text Label 4100 2450 2    50   ~ 0
+A15
+$Comp
+L CPU:Z80CPU U?
+U 1 1 5F8308BF
+P 1600 2200
+F 0 "U?" H 1600 2200 50  0000 C CNN
+F 1 "Z80CPU" H 1150 700 50  0000 C CNN
+F 2 "" H 1600 2600 50  0001 C CNN
+F 3 "www.zilog.com/manage_directlink.php?filepath=docs/z80/um0080" H 1600 2600 50  0001 C CNN
+	1    1600 2200
+	1    0    0    -1  
+$EndComp
+Text Label 2300 2700 0    50   ~ 0
+D0
+Text Label 2300 2800 0    50   ~ 0
+D1
+Text Label 2300 2900 0    50   ~ 0
+D2
+Text Label 2300 3000 0    50   ~ 0
+D3
+Text Label 2300 3100 0    50   ~ 0
+D4
+Text Label 2300 3200 0    50   ~ 0
+D5
+Text Label 2300 3300 0    50   ~ 0
+D6
+Text Label 2300 3400 0    50   ~ 0
+D7
+Text Label 5100 1650 0    50   ~ 0
+D7
+Text Label 5100 1550 0    50   ~ 0
+D6
+Text Label 5100 1450 0    50   ~ 0
+D5
+Text Label 5100 1350 0    50   ~ 0
+D4
+Text Label 5100 1250 0    50   ~ 0
+D3
+Text Label 5100 1150 0    50   ~ 0
+D2
+Text Label 5100 1050 0    50   ~ 0
+D1
+Text Label 5100 950  0    50   ~ 0
+D0
+Text Label 2300 1900 0    50   ~ 0
+A9
+Text Label 2300 1800 0    50   ~ 0
+A8
+Text Label 2300 1700 0    50   ~ 0
+A7
+Text Label 2300 1600 0    50   ~ 0
+A6
+Text Label 2300 1500 0    50   ~ 0
+A5
+Text Label 2300 1400 0    50   ~ 0
+A4
+Text Label 2300 1300 0    50   ~ 0
+A3
+Text Label 2300 1200 0    50   ~ 0
+A2
+Text Label 2300 1100 0    50   ~ 0
+A1
+Text Label 2300 1000 0    50   ~ 0
+A0
+Text Label 2300 2000 0    50   ~ 0
+A10
+Text Label 2300 2100 0    50   ~ 0
+A11
+Text Label 2300 2200 0    50   ~ 0
+A12
+Text Label 2300 2300 0    50   ~ 0
+A13
+Text Label 2300 2400 0    50   ~ 0
+A14
+Text Label 2300 2500 0    50   ~ 0
+A15
+Text Label 8250 1700 2    50   ~ 0
+D7
+Text Label 8250 1600 2    50   ~ 0
+D6
+Text Label 8250 1500 2    50   ~ 0
+D5
+Text Label 8250 1400 2    50   ~ 0
+D4
+Text Label 8250 1300 2    50   ~ 0
+D3
+Text Label 8250 1200 2    50   ~ 0
+D2
+Text Label 8250 1100 2    50   ~ 0
+D1
+Text Label 8250 1000 2    50   ~ 0
+D0
+Text Label 5100 2150 0    50   ~ 0
+~MEMWR
+Text Label 5100 2050 0    50   ~ 0
+~MEMRD
+Text Label 5100 1950 0    50   ~ 0
+RAM\~ROM
+$Comp
+L power:GND #PWR?
+U 1 1 5FC38335
+P 4000 2550
+F 0 "#PWR?" H 4000 2300 50  0001 C CNN
+F 1 "GND" H 4005 2377 50  0000 C CNN
+F 2 "" H 4000 2550 50  0001 C CNN
+F 3 "" H 4000 2550 50  0001 C CNN
+	1    4000 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2550 4100 2550
+$Comp
+L power:GND #PWR?
+U 1 1 5FC39E2E
+P 5550 1850
+F 0 "#PWR?" H 5550 1600 50  0001 C CNN
+F 1 "GND" H 5555 1677 50  0000 C CNN
+F 2 "" H 5550 1850 50  0001 C CNN
+F 3 "" H 5550 1850 50  0001 C CNN
+	1    5550 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 1850 5550 1850
+$Comp
+L Memory_EEPROM:28C256 U?
+U 1 1 5FC3D884
+P 3250 1850
+F 0 "U?" H 3250 1850 50  0000 C CNN
+F 1 "28C256" H 2900 700 50  0000 C CNN
+F 2 "" H 3250 1850 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 3250 1850 50  0001 C CNN
+	1    3250 1850
+	1    0    0    -1  
+$EndComp
+Text Label 2850 1850 2    50   ~ 0
+A9
+Text Label 2850 1750 2    50   ~ 0
+A8
+Text Label 2850 1650 2    50   ~ 0
+A7
+Text Label 2850 1550 2    50   ~ 0
+A6
+Text Label 2850 1450 2    50   ~ 0
+A5
+Text Label 2850 1350 2    50   ~ 0
+A4
+Text Label 2850 1250 2    50   ~ 0
+A3
+Text Label 2850 1150 2    50   ~ 0
+A2
+Text Label 2850 1050 2    50   ~ 0
+A1
+Text Label 2850 950  2    50   ~ 0
+A0
+Text Label 2850 1950 2    50   ~ 0
+A10
+Text Label 2850 2050 2    50   ~ 0
+A11
+Text Label 2850 2150 2    50   ~ 0
+A12
+Text Label 2850 2250 2    50   ~ 0
+A13
+$Comp
+L Switch:SW_DIP_x01 SW?
+U 1 1 5FC4009A
+P 3000 3550
+F 0 "SW?" H 3000 3817 50  0000 C CNN
+F 1 "ROMBNK" H 3000 3726 50  0000 C CNN
+F 2 "" H 3000 3550 50  0001 C CNN
+F 3 "~" H 3000 3550 50  0001 C CNN
+	1    3000 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FC413D5
+P 3300 3700
+F 0 "R?" H 3370 3746 50  0000 L CNN
+F 1 "10K" V 3300 3650 50  0000 L CNN
+F 2 "" V 3230 3700 50  0001 C CNN
+F 3 "~" H 3300 3700 50  0001 C CNN
+	1    3300 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FC41F8D
+P 2700 3550
+F 0 "#PWR?" H 2700 3400 50  0001 C CNN
+F 1 "VCC" H 2600 3700 50  0000 C CNN
+F 2 "" H 2700 3550 50  0001 C CNN
+F 3 "" H 2700 3550 50  0001 C CNN
+	1    2700 3550
+	1    0    0    -1  
+$EndComp
+Text Label 3500 3550 0    50   ~ 0
+ROMBNK
+Wire Wire Line
+	3500 3550 3300 3550
+Connection ~ 3300 3550
+$Comp
+L power:GND #PWR?
+U 1 1 5FC44204
+P 3300 3850
+F 0 "#PWR?" H 3300 3600 50  0001 C CNN
+F 1 "GND" H 3305 3677 50  0000 C CNN
+F 2 "" H 3300 3850 50  0001 C CNN
+F 3 "" H 3300 3850 50  0001 C CNN
+	1    3300 3850
+	1    0    0    -1  
+$EndComp
+Text Label 2850 2350 2    50   ~ 0
+ROMBNK
+Text Label 3650 1650 0    50   ~ 0
+D7
+Text Label 3650 1550 0    50   ~ 0
+D6
+Text Label 3650 1450 0    50   ~ 0
+D5
+Text Label 3650 1350 0    50   ~ 0
+D4
+Text Label 3650 1250 0    50   ~ 0
+D3
+Text Label 3650 1150 0    50   ~ 0
+D2
+Text Label 3650 1050 0    50   ~ 0
+D1
+Text Label 3650 950  0    50   ~ 0
+D0
+$Comp
+L power:VCC #PWR?
+U 1 1 5FC4B1FF
+P 2800 2550
+F 0 "#PWR?" H 2800 2400 50  0001 C CNN
+F 1 "VCC" H 2700 2650 50  0000 C CNN
+F 2 "" H 2800 2550 50  0001 C CNN
+F 3 "" H 2800 2550 50  0001 C CNN
+	1    2800 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 2550 2800 2550
+Text Label 2850 2650 2    50   ~ 0
+~MEMRD
+Text Label 2850 2750 2    50   ~ 0
+RAM\~ROM
+$Comp
+L power:GND #PWR?
+U 1 1 5FC4DD6A
+P 3250 2950
+F 0 "#PWR?" H 3250 2700 50  0001 C CNN
+F 1 "GND" H 3255 2777 50  0000 C CNN
+F 2 "" H 3250 2950 50  0001 C CNN
+F 3 "" H 3250 2950 50  0001 C CNN
+	1    3250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FC4E7E6
+P 3250 750
+F 0 "#PWR?" H 3250 600 50  0001 C CNN
+F 1 "VCC" H 3265 923 50  0000 C CNN
+F 2 "" H 3250 750 50  0001 C CNN
+F 3 "" H 3250 750 50  0001 C CNN
+	1    3250 750 
+	1    0    0    -1  
+$EndComp
+Text Label 800  5600 0    50   ~ 0
+~MREQ
+Text Label 800  5400 0    50   ~ 0
+~WR
+Text Label 800  5200 0    50   ~ 0
+~MREQ
+Text Label 800  5000 0    50   ~ 0
+~RD
+Text Label 800  4800 0    50   ~ 0
+~IORQ
+Text Label 800  4650 0    50   ~ 0
+~WR
+Text Label 800  4450 0    50   ~ 0
+~IORQ
+Wire Wire Line
+	800  4450 1000 4450
+Wire Wire Line
+	800  4650 1000 4650
+Wire Wire Line
+	800  4800 1000 4800
+Wire Wire Line
+	800  5000 1000 5000
+Wire Wire Line
+	800  5200 1000 5200
+Wire Wire Line
+	800  5400 1000 5400
+Wire Wire Line
+	800  5600 1000 5600
+Wire Wire Line
+	800  5800 1000 5800
+$Comp
+L 74xx:74LS32 U?
+U 5 1 5FC747B7
+P 10700 5700
+F 0 "U?" H 10650 5700 50  0000 L CNN
+F 1 "74LS32" V 10450 5600 50  0000 L CNN
+F 2 "" H 10700 5700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 10700 5700 50  0001 C CNN
+	5    10700 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FC7A2F5
+P 10700 5200
+F 0 "#PWR?" H 10700 5050 50  0001 C CNN
+F 1 "VCC" H 10715 5373 50  0000 C CNN
+F 2 "" H 10700 5200 50  0001 C CNN
+F 3 "" H 10700 5200 50  0001 C CNN
+	1    10700 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FC7ADC3
+P 10100 6200
+F 0 "#PWR?" H 10100 5950 50  0001 C CNN
+F 1 "GND" H 10105 6027 50  0000 C CNN
+F 2 "" H 10100 6200 50  0001 C CNN
+F 3 "" H 10100 6200 50  0001 C CNN
+	1    10100 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74LS32 U?
+U 1 1 5FC7BD1A
+P 4350 5500
+F 0 "U?" H 4350 5500 50  0000 C CNN
+F 1 "74LS32" H 4350 5734 50  0000 C CNN
+F 2 "" H 4350 5500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 4350 5500 50  0001 C CNN
+	1    4350 5500
+	1    0    0    -1  
+$EndComp
+Text Label 4050 5400 2    50   ~ 0
+~IOWR
+Text Label 4650 5500 0    50   ~ 0
+~ROMOFF
+$Comp
+L 74xx:74HCT00 U?
+U 1 1 5FC80B62
+P 5250 4850
+F 0 "U?" H 5250 4850 50  0000 C CNN
+F 1 "74HCT00" H 5250 5100 50  0000 C CNN
+F 2 "" H 5250 4850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 5250 4850 50  0001 C CNN
+	1    5250 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT00 U?
+U 2 1 5FC84E13
+P 5250 5400
+F 0 "U?" H 5250 5400 50  0000 C CNN
+F 1 "74HCT00" H 5250 5200 50  0000 C CNN
+F 2 "" H 5250 5400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct00" H 5250 5400 50  0001 C CNN
+	2    5250 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4950 4800 4950
+Wire Wire Line
+	4800 4950 4800 5000
+Wire Wire Line
+	4950 5300 4800 5300
+Wire Wire Line
+	4800 5300 4800 5250
+Wire Wire Line
+	4800 5000 5600 5250
+Wire Wire Line
+	5600 5250 5600 5400
+Wire Wire Line
+	5600 5400 5550 5400
+Wire Wire Line
+	5550 4850 5600 4850
+Wire Wire Line
+	5600 4850 5600 5050
+Wire Wire Line
+	5600 5050 4800 5250
+Wire Wire Line
+	4650 5500 4950 5500
+Text Label 4950 4750 2    50   ~ 0
+~RESET
+Text Label 5750 5400 0    50   ~ 0
+~ROM_DISABLED
+$Sheet
+S 9600 2450 550  350 
+U 5FCB0453
+F0 "USB_UART" 50
+F1 "USB_UART.sch" 50
+F2 "TX" I L 9600 2550 50 
+F3 "RX" I L 9600 2650 50 
+$EndSheet
+$Comp
+L 74xx:74LS32 U?
+U 5 1 5FCCF79A
+P 10100 5700
+F 0 "U?" H 10050 5700 50  0000 L CNN
+F 1 "74LS32" V 9850 5600 50  0000 L CNN
+F 2 "" H 10100 5700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 10100 5700 50  0001 C CNN
+	5    10100 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5FCD2D09
+P 10100 5200
+F 0 "#PWR?" H 10100 5050 50  0001 C CNN
+F 1 "VCC" H 10115 5373 50  0000 C CNN
+F 2 "" H 10100 5200 50  0001 C CNN
+F 3 "" H 10100 5200 50  0001 C CNN
+	1    10100 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FCD3509
+P 10700 6200
+F 0 "#PWR?" H 10700 5950 50  0001 C CNN
+F 1 "GND" H 10705 6027 50  0000 C CNN
+F 2 "" H 10700 6200 50  0001 C CNN
+F 3 "" H 10700 6200 50  0001 C CNN
+	1    10700 6200
+	1    0    0    -1  
+$EndComp
+Text Label 6500 4950 0    50   ~ 0
+~LOW16K
+Text Label 5900 4850 2    50   ~ 0
+A15
+Text Label 5900 5050 2    50   ~ 0
+A14
+$Comp
+L 74xx:74LS32 U?
+U 4 1 5FCCD4EF
+P 7100 5050
+F 0 "U?" H 7100 5050 50  0000 C CNN
+F 1 "74LS32" H 7100 5284 50  0000 C CNN
+F 2 "" H 7100 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 7100 5050 50  0001 C CNN
+	4    7100 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4550 2050 4550
+Wire Wire Line
+	2050 4550 2050 4300
+Wire Wire Line
+	3800 4300 3800 5400
+Text Label 7400 5050 0    50   ~ 0
+RAM\~ROM
+$Comp
+L 74xx:74LS32 U?
+U 3 1 5FCC6A35
+P 6200 4950
+F 0 "U?" H 6200 4950 50  0000 C CNN
+F 1 "74LS32" H 6200 5184 50  0000 C CNN
+F 2 "" H 6200 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 6200 4950 50  0001 C CNN
+	3    6200 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 5400 6500 5400
+Wire Wire Line
+	6500 5400 6700 5150
+Connection ~ 5600 5400
+Wire Wire Line
+	3800 5400 4050 5400
+Wire Wire Line
+	3300 5600 4050 5600
+Wire Wire Line
+	6500 4950 6800 4950
+Wire Wire Line
+	6800 5150 6700 5150
+Wire Wire Line
+	2050 4300 3800 4300
+$EndSCHEMATC
