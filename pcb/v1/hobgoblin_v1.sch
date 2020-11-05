@@ -1980,4 +1980,21 @@ F 3 "" H 5550 6750 50  0001 C CNN
 	1    5550 6750
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:C C?
+U 1 1 60AE0FC1
+P 7950 6200
+F 0 "C?" H 8000 6300 50  0000 L CNN
+F 1 "0.1uF" V 7800 6100 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7988 6050 50  0001 C CNN
+F 3 "~" H 7950 6200 50  0001 C CNN
+	1    7950 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 6050 7950 6050
+Connection ~ 7650 6050
+Wire Wire Line
+	7650 6350 7950 6350
+Connection ~ 7650 6350
 $EndSCHEMATC
