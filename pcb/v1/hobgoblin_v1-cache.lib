@@ -307,6 +307,38 @@ X ~ 2 300 -100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_Conn_01x06_Female
+#
+DEF Connector_Conn_01x06_Female J 0 40 Y N 1 F N
+F0 "J" 0 300 50 H V C CNN
+F1 "Connector_Conn_01x06_Female" 0 -400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*_1x??_*
+$ENDFPLIST
+DRAW
+A 0 -300 20 901 -901 1 1 6 N 0 -280 0 -320
+A 0 -200 20 901 -901 1 1 6 N 0 -180 0 -220
+A 0 -100 20 901 -901 1 1 6 N 0 -80 0 -120
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+A 0 100 20 901 -901 1 1 6 N 0 120 0 80
+A 0 200 20 901 -901 1 1 6 N 0 220 0 180
+P 2 1 1 6 -50 -300 -20 -300 N
+P 2 1 1 6 -50 -200 -20 -200 N
+P 2 1 1 6 -50 -100 -20 -100 N
+P 2 1 1 6 -50 0 -20 0 N
+P 2 1 1 6 -50 100 -20 100 N
+P 2 1 1 6 -50 200 -20 200 N
+X Pin_1 1 -200 200 150 R 50 50 1 1 P
+X Pin_2 2 -200 100 150 R 50 50 1 1 P
+X Pin_3 3 -200 0 150 R 50 50 1 1 P
+X Pin_4 4 -200 -100 150 R 50 50 1 1 P
+X Pin_5 5 -200 -200 150 R 50 50 1 1 P
+X Pin_6 6 -200 -300 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Generic_Conn_01x40
 #
 DEF Connector_Generic_Conn_01x40 J 0 40 Y N 1 F N
@@ -471,6 +503,27 @@ $FPLIST
 $ENDFPLIST
 DRAW
 A 0 -10 57 450 1350 0 1 0 N 40 30 -40 30
+C -40 0 20 0 1 0 N
+C 40 0 20 0 1 0 N
+X 1 1 -100 0 40 R 50 50 0 1 P
+X 2 2 100 0 40 L 50 50 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_Jumper_NO_Small
+#
+DEF Device_Jumper_NO_Small JP 0 30 N N 1 F N
+F0 "JP" 0 80 50 H V C CNN
+F1 "Device_Jumper_NO_Small" 10 -60 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Open*
+ Jumper*
+ TestPoint*2Pads*
+ TestPoint*Bridge*
+$ENDFPLIST
+DRAW
 C -40 0 20 0 1 0 N
 C 40 0 20 0 1 0 N
 X 1 1 -100 0 40 R 50 50 0 1 P
@@ -711,24 +764,24 @@ X A3 9 -500 500 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Oscillator_CXO_DIP14
+# Oscillator_CXO_DIP8
 #
-DEF Oscillator_CXO_DIP14 X 0 10 Y Y 1 F N
+DEF Oscillator_CXO_DIP8 X 0 10 Y Y 1 F N
 F0 "X" -200 250 50 H V L CNN
-F1 "Oscillator_CXO_DIP14" 50 -250 50 H V L CNN
-F2 "Oscillator:Oscillator_DIP-14" 450 -350 50 H I C CNN
+F1 "Oscillator_CXO_DIP8" 50 -250 50 H V L CNN
+F2 "Oscillator:Oscillator_DIP-8" 450 -350 50 H I C CNN
 F3 "" -100 0 50 H I C CNN
-ALIAS TFT680 GTXO-14T
+ALIAS TFT660
 $FPLIST
- Oscillator*DIP*14*
+ Oscillator*DIP*8*
 $ENDFPLIST
 DRAW
 S -200 200 200 -200 0 1 10 f
 P 9 0 1 0 -75 -25 -50 -25 -50 25 -25 25 -25 -25 0 -25 0 25 25 25 25 -25 N
 X EN 1 -300 0 100 R 50 50 1 1 I
-X Vcc 14 0 300 100 D 50 50 1 1 W
-X GND 7 0 -300 100 U 50 50 1 1 W
-X OUT 8 300 0 100 L 50 50 1 1 O
+X GND 4 0 -300 100 U 50 50 1 1 W
+X OUT 5 300 0 100 L 50 50 1 1 O
+X Vcc 8 0 300 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #

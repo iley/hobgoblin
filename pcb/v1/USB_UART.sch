@@ -119,7 +119,7 @@ L Device:Jumper_NC_Small JP1
 U 1 1 5FF5BA23
 P 4150 2850
 F 0 "JP1" H 4150 3062 50  0000 C CNN
-F 1 "USBPWR" H 4150 2971 50  0000 C CNN
+F 1 "USB_VCC" H 4150 2971 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 4150 2850 50  0001 C CNN
 F 3 "~" H 4150 2850 50  0001 C CNN
 	1    4150 2850
@@ -278,4 +278,94 @@ Text Label 4200 3050 0    50   ~ 0
 USBD+
 Text Label 4200 3150 0    50   ~ 0
 USBD-
+$Comp
+L Connector:Conn_01x06_Female J5
+U 1 1 60B8677D
+P 9550 2950
+F 0 "J5" H 9578 2926 50  0000 L CNN
+F 1 "UART" H 9578 2835 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9550 2950 50  0001 C CNN
+F 3 "~" H 9550 2950 50  0001 C CNN
+	1    9550 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 60B8780A
+P 9200 2850
+F 0 "R12" V 9100 2850 50  0000 C CNN
+F 1 "2K7" V 9200 2850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 2850 50  0001 C CNN
+F 3 "~" H 9200 2850 50  0001 C CNN
+	1    9200 2850
+	0    1    1    0   
+$EndComp
+NoConn ~ 9350 2750
+$Comp
+L Device:R R13
+U 1 1 60B8845F
+P 9200 2950
+F 0 "R13" V 9300 2950 50  0000 C CNN
+F 1 "2K7" V 9200 2950 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 2950 50  0001 C CNN
+F 3 "~" H 9200 2950 50  0001 C CNN
+	1    9200 2950
+	0    1    1    0   
+$EndComp
+Text HLabel 9050 2950 0    50   Input ~ 0
+RX
+Text HLabel 9050 2850 0    50   Output ~ 0
+TX
+$Comp
+L Device:Jumper_NO_Small JP2
+U 1 1 60B88B00
+P 8700 3050
+F 0 "JP2" H 8700 3235 50  0000 C CNN
+F 1 "UART_VCC" H 8700 3144 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 3050 50  0001 C CNN
+F 3 "~" H 8700 3050 50  0001 C CNN
+	1    8700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8800 3050 9350 3050
+$Comp
+L power:VCC #PWR049
+U 1 1 60B8B1B0
+P 8400 3000
+F 0 "#PWR049" H 8400 2850 50  0001 C CNN
+F 1 "VCC" H 8415 3173 50  0000 C CNN
+F 2 "" H 8400 3000 50  0001 C CNN
+F 3 "" H 8400 3000 50  0001 C CNN
+	1    8400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 3000 8400 3050
+Wire Wire Line
+	8400 3050 8600 3050
+$Comp
+L Device:R R14
+U 1 1 60B8BFD6
+P 9200 3150
+F 0 "R14" V 9300 3150 50  0000 C CNN
+F 1 "2K7" V 9200 3150 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9130 3150 50  0001 C CNN
+F 3 "~" H 9200 3150 50  0001 C CNN
+	1    9200 3150
+	0    1    1    0   
+$EndComp
+Text HLabel 9050 3150 0    50   Output ~ 0
+~RTS
+$Comp
+L power:GND #PWR068
+U 1 1 60B8C642
+P 9350 3250
+F 0 "#PWR068" H 9350 3000 50  0001 C CNN
+F 1 "GND" H 9355 3077 50  0000 C CNN
+F 2 "" H 9350 3250 50  0001 C CNN
+F 3 "" H 9350 3250 50  0001 C CNN
+	1    9350 3250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

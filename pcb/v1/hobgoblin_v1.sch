@@ -196,17 +196,6 @@ Reset circuit
 Text Label 900  1000 2    50   ~ 0
 ~RESET
 $Comp
-L Oscillator:CXO_DIP14 X1
-U 1 1 5F8D5383
-P 7750 4350
-F 0 "X1" H 8000 4250 50  0000 L CNN
-F 1 "10MHz" H 8150 4250 50  0000 L CNN
-F 2 "Oscillator:Oscillator_DIP-14" H 8200 4000 50  0001 C CNN
-F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 7650 4350 50  0001 C CNN
-	1    7750 4350
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR035
 U 1 1 5F8D6D11
 P 7750 4650
@@ -231,17 +220,6 @@ F 3 "" H 7750 4050 50  0001 C CNN
 $EndComp
 Text Label 8050 4350 0    50   ~ 0
 CPU_CLK
-$Comp
-L Oscillator:CXO_DIP14 X2
-U 1 1 5F8D7F95
-P 9000 4350
-F 0 "X2" H 9250 4250 50  0000 L CNN
-F 1 "7.3728MHz" H 9400 4250 50  0000 L CNN
-F 2 "Oscillator:Oscillator_DIP-14" H 9450 4000 50  0001 C CNN
-F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 8900 4350 50  0001 C CNN
-	1    9000 4350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR041
 U 1 1 5F8D7F9F
@@ -1522,9 +1500,9 @@ NoConn ~ 9150 3400
 NoConn ~ 9150 2700
 NoConn ~ 9150 1800
 NoConn ~ 9150 1700
-Text Label 9150 2500 0    50   ~ 0
-~RD
 Text Label 9150 2600 0    50   ~ 0
+~RD
+Text Label 9150 2500 0    50   ~ 0
 ~WR
 NoConn ~ 9150 2300
 $Comp
@@ -1622,8 +1600,6 @@ NoConn ~ 9150 2000
 NoConn ~ 3100 4900
 Text Label 6150 2400 2    50   ~ 0
 IORQ
-Text Label 6150 1900 2    50   ~ 0
-~IOWR
 Wire Wire Line
 	600  5800 800  5800
 Wire Wire Line
@@ -1981,10 +1957,10 @@ F 3 "" H 5550 6750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C16
 U 1 1 60AE0FC1
 P 7950 6200
-F 0 "C?" H 8000 6300 50  0000 L CNN
+F 0 "C16" H 8000 6300 50  0000 L CNN
 F 1 "0.1uF" V 7800 6100 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm" H 7988 6050 50  0001 C CNN
 F 3 "~" H 7950 6200 50  0001 C CNN
@@ -1997,4 +1973,28 @@ Connection ~ 7650 6050
 Wire Wire Line
 	7650 6350 7950 6350
 Connection ~ 7650 6350
+$Comp
+L Oscillator:CXO_DIP8 X2
+U 1 1 60B385BD
+P 9000 4350
+F 0 "X2" H 8800 4100 50  0000 L CNN
+F 1 "7.3728MHz" H 9100 4100 50  0000 L CNN
+F 2 "Oscillator:Oscillator_DIP-8" H 9450 4000 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 8900 4350 50  0001 C CNN
+	1    9000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Oscillator:CXO_DIP8 X1
+U 1 1 60B39F6D
+P 7750 4350
+F 0 "X1" H 7550 4100 50  0000 L CNN
+F 1 "10MHz" H 7850 4100 50  0000 L CNN
+F 2 "Oscillator:Oscillator_DIP-8" H 8200 4000 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/OSZI.pdf" H 7650 4350 50  0001 C CNN
+	1    7750 4350
+	1    0    0    -1  
+$EndComp
+Text Label 6150 1900 2    50   ~ 0
+~WR
 $EndSCHEMATC
