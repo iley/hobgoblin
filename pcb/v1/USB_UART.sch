@@ -250,7 +250,7 @@ RX
 Text HLabel 7500 2850 2    50   Output ~ 0
 TX
 $Comp
-L Connector:USB_B_Mini J4
+L hobgoblin_v1-rescue:USB_B_Mini-Connector J4
 U 1 1 5FAD533D
 P 3750 3050
 F 0 "J4" H 3807 3517 50  0000 C CNN

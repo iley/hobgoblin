@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name hobgoblin)(type Legacy)(uri ${KIPRJMOD}/../lib/hobgoblin.lib)(options "")(descr ""))
+  (lib (name hobgoblin_v1-rescue)(type Legacy)(uri ${KIPRJMOD}/hobgoblin_v1-rescue.lib)(options "")(descr ""))
 )
