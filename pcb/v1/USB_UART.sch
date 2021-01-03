@@ -6,7 +6,7 @@ encoding utf-8
 Sheet 2 2
 Title "Hobgoblin Computer"
 Date ""
-Rev "v1"
+Rev "v1.3"
 Comp "Ilya Strukov"
 Comment1 ""
 Comment2 ""
