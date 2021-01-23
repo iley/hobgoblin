@@ -1501,9 +1501,9 @@ NoConn ~ 9150 2700
 NoConn ~ 9150 1800
 NoConn ~ 9150 1700
 Text Label 9150 2600 0    50   ~ 0
-~RD
+~IORD
 Text Label 9150 2500 0    50   ~ 0
-~WR
+~IOWR
 NoConn ~ 9150 2300
 $Comp
 L Device:R R10
@@ -2031,4 +2031,23 @@ F 3 "" H 9750 900 50  0001 C CNN
 	1    9750 900 
 	1    0    0    -1  
 $EndComp
+$Comp
+L 74xx:74LS32 U1
+U 2 1 600D80CC
+P 1100 4950
+F 0 "U1" H 1100 4950 50  0000 C CNN
+F 1 "74LS32" H 1300 5100 50  0000 C CNN
+F 2 "" H 1100 4950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74LS32" H 1100 4950 50  0001 C CNN
+	2    1100 4950
+	1    0    0    -1  
+$EndComp
+Text Label 1400 4950 0    50   ~ 0
+~IORD
+Text Label 800  4850 2    50   ~ 0
+~IORQ
+Text Label 700  5050 2    50   ~ 0
+~RD
+Wire Wire Line
+	700  5050 800  5050
 $EndSCHEMATC
