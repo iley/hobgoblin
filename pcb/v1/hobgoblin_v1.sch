@@ -446,17 +446,6 @@ Text Label 2000 5000 0    50   ~ 0
 A4
 Text Label 2000 5100 0    50   ~ 0
 A5
-$Comp
-L power:VCC #PWR011
-U 1 1 5FBC9D21
-P 2100 5400
-F 0 "#PWR011" H 2100 5250 50  0001 C CNN
-F 1 "VCC" H 2115 5573 50  0000 C CNN
-F 2 "" H 2100 5400 50  0001 C CNN
-F 3 "" H 2100 5400 50  0001 C CNN
-	1    2100 5400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2000 5500 2100 5500
 Wire Wire Line
@@ -2050,4 +2039,6 @@ Text Label 700  5050 2    50   ~ 0
 ~RD
 Wire Wire Line
 	700  5050 800  5050
+Text Label 2100 5400 2    50   ~ 0
+~M1
 $EndSCHEMATC
