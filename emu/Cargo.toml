@@ -1,0 +1,8 @@
+[package]
+name = "emu"
+version = "0.1.0"
+edition = "2018"
+authors = ["Ilya Strukov <ilya@istrukov.com>"]
+
+[dependencies]
+log = "0.4"
