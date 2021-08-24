@@ -22,6 +22,7 @@ impl<'a> Bus<'a> {
 
     pub fn attach(&mut self, device: &'a mut dyn Device, start_addr: u16, length: u16) {
         // TODO: Check for overlaps.
+        // TODO: Check for range.
         let end_addr = start_addr + length - 1;
         self.mappings.insert(
             start_addr,

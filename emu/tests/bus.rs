@@ -7,8 +7,12 @@ fn test_bus() {
     let mut ram = RAM::new(10);
 
     bus.attach(&mut ram, 0x1000, 10);
-    bus.write(0x1000, 42);
 
+    bus.write(0x1000, 42);
     assert_eq!(bus.read(0x1000), 42);
+
+    bus.write(0, 42);
+    assert_eq!(bus.read(0), 0);
+
     assert_eq!(ram.read(0), 42);
 }
