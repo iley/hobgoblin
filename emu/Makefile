@@ -11,6 +11,8 @@ DEPS=$(SRCS:.cc=.d)
 
 default: $(BIN)
 
+all: $(BIN) $(TEST_BIN)
+
 clean:
 	rm -f $(BIN) $(TEST_BIN) $(OBJ) $(TEST_OBJ)
 
@@ -43,4 +45,4 @@ deps: $(DEPS)
 
 include $(DEPS)
 
-.PHONY: clean cleanall cleandeps default deps test
+.PHONY: all clean cleanall cleandeps default deps test
