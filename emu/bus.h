@@ -13,8 +13,8 @@ class Bus : public Device {
 public:
     void Attach(Device* device, uint16_t start_address, uint16_t end_address);
 
-    void Write(const uint16_t address, const uint8_t value) override;
-    uint8_t Read(const uint16_t address) override;
+    void Write(uint16_t address, uint8_t value) override;
+    uint8_t Read(uint16_t address) override;
 
 private:
     struct DeviceDescriptor {

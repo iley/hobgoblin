@@ -4,8 +4,8 @@
 
 namespace emu {
 
-Memory::Memory(const uint16_t size, Memory::AccessMode mode)
-    : data_(static_cast<size_t>(size), 0x00)
+Memory::Memory(size_t size, Memory::AccessMode mode)
+    : data_(size, 0x00)
     , mode_(mode)
 {}
 

@@ -15,7 +15,7 @@ public:
         READWRITE,
     };
 
-    explicit Memory(const uint16_t size, AccessMode mode=AccessMode::READWRITE);
+    explicit Memory(size_t size, AccessMode mode=AccessMode::READWRITE);
 
     void Write(uint16_t address, uint8_t value) override;
     uint8_t Read(uint16_t address) override;

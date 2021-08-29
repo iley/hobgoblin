@@ -20,7 +20,7 @@ void Bus::Attach(Device* device, uint16_t start_address, uint16_t end_address) {
     };
 }
 
-void Bus::Write(const uint16_t address, const uint8_t value) {
+void Bus::Write(uint16_t address, uint8_t value) {
     auto desc = FindDevice(address);
     if (!desc) {
         return;
@@ -28,7 +28,7 @@ void Bus::Write(const uint16_t address, const uint8_t value) {
     desc->device->Write(address - desc->start_address, value);
 }
 
-uint8_t Bus::Read(const uint16_t address) {
+uint8_t Bus::Read(uint16_t address) {
     auto desc = FindDevice(address);
     if (!desc) {
         return 0;
