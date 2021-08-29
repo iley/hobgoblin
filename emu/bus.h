@@ -1,0 +1,33 @@
+#ifndef _HOBGOBLIN_EMU_BUS_H
+#define _HOBGOBLIN_EMU_BUS_H
+
+#include <exception>
+#include <map>
+#include <optional>
+
+#include "device.h"
+
+namespace emu {
+
+class Bus : public Device {
+public:
+    void Attach(Device* device, uint16_t start_address, uint16_t end_address);
+
+    void Write(const uint16_t address, const uint8_t value) override;
+    uint8_t Read(const uint16_t address) override;
+
+private:
+    struct DeviceDescriptor {
+        Device* device;
+        uint16_t start_address;
+        uint16_t end_address;
+    };
+
+    std::map<uint16_t, DeviceDescriptor> device_map_;
+
+    std::optional<DeviceDescriptor> FindDevice(uint16_t address);
+};
+
+} // namespace emu
+
+#endif // _HOBGOBLIN_EMU_BUS_H

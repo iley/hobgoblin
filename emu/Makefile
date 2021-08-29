@@ -1,6 +1,6 @@
 BIN=emu
-OBJ=main.o memory.o
-TEST_BIN=memory_test
+OBJ=bus.o main.o memory.o
+TEST_BIN=bus_test memory_test
 TEST_OBJ=$(TEST_BIN:=.o)
 
 CXX=clang++
@@ -27,7 +27,7 @@ $(BIN): $(OBJ)
 $(OBJ) $(TEST_OBJ): %.o: %.cc
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
-$(TEST_BIN): %_test: %_test.o %.o
+$(TEST_BIN): %_test: %_test.o $(filter-out main.o,$(OBJ))
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 run_test_targets=$(addprefix run_, $(TEST_BIN))
