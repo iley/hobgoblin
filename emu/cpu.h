@@ -23,6 +23,19 @@ struct Z80Registers {
 
     uint8_t i;
     uint8_t r;
+
+    uint8_t a() const { return hi(af); }
+    uint8_t f() const { return lo(af); }
+    uint8_t b() const { return hi(bc); }
+    uint8_t c() const { return lo(bc); }
+    uint8_t d() const { return hi(de); }
+    uint8_t e() const { return lo(de); }
+    uint8_t h() const { return hi(hl); }
+    uint8_t l() const { return lo(hl); }
+
+private:
+    static uint8_t hi(uint16_t val) { return (val >> 8) & 0xff; }
+    static uint8_t lo(uint16_t val) { return val & 0xff; }
 };
 
 class Z80CPU {

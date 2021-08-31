@@ -21,9 +21,9 @@ TEST_CASE("RAM read/write") {
 
 TEST_CASE("RAM load") {
     const std::vector<uint8_t> source_data({1, 2, 3});
+    Memory ram(10);
 
     SECTION("complete load") {
-        Memory ram(10);
         const uint16_t loaded_bytes = ram.Load(source_data);
 
         REQUIRE(loaded_bytes == 3);
@@ -33,7 +33,6 @@ TEST_CASE("RAM load") {
     }
 
     SECTION("partial load") {
-        Memory ram(10);
         const uint16_t loaded_bytes = ram.Load(source_data, 8);
 
         REQUIRE(loaded_bytes == 2);
@@ -42,8 +41,6 @@ TEST_CASE("RAM load") {
     }
 
     SECTION("load from file") {
-        Memory ram(10);
-
         FILE* file = std::tmpfile();
         REQUIRE(file != nullptr);
         const size_t written_bytes = std::fwrite(source_data.data(), sizeof(uint8_t), source_data.size(), file);

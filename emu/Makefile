@@ -1,5 +1,5 @@
 BIN=emu
-OBJ=bus.o cpu.o main.o memory.o null_device.o
+OBJ=bus.o cpu.o device.o main.o memory.o null_device.o
 TEST_BIN=bus_test cpu_test memory_test
 TEST_OBJ=$(TEST_BIN:=.o)
 
