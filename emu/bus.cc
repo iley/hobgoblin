@@ -2,12 +2,15 @@
 
 #include <algorithm>
 #include <cassert>
+#include <mutex>
 
 using std::nullopt;
 
 namespace emu {
 
 void Bus::Attach(Device* device, uint16_t start_address, uint16_t end_address) {
+    std::scoped_lock lock(mutex_);
+
     // Verify that new mapping does not overlap with any of the existing ones.
     // Overlapping mappings are not supported.
     assert(std::all_of(device_map_.cbegin(), device_map_.cend(), [&start_address, &end_address](const auto& pair) {
@@ -37,6 +40,8 @@ uint8_t Bus::Read(uint16_t address) {
 }
 
 std::optional<Bus::DeviceDescriptor> Bus::FindDevice(uint16_t address) {
+    std::shared_lock lock(mutex_);
+
     if (device_map_.empty()) {
         return nullopt;
     }

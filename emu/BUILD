@@ -1,11 +1,14 @@
 cc_binary(
     name = "emu",
-    srcs = ["main.cc"],
+    srcs = ["emu_main.cc"],
     deps = [
         "@com_google_absl//absl/flags:flag",
         "@com_google_absl//absl/flags:parse",
+        "@com_google_absl//absl/status",
+        "@com_google_absl//absl/strings",
         ":bus",
         ":cpu",
+        ":emulator",
         ":memory",
         ":null_device",
     ],
@@ -75,5 +78,15 @@ cc_test(
         ":cpu",
         ":memory",
         ":null_device",
+    ],
+)
+
+cc_library(
+    name = "emulator",
+    hdrs = ["emulator.h"],
+    srcs = ["emulator.cc"],
+    deps = [
+        ":cpu",
+        ":device",
     ],
 )

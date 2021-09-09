@@ -3,6 +3,7 @@
 
 #include <exception>
 #include <map>
+#include <shared_mutex>
 #include <optional>
 
 #include "device.h"
@@ -23,6 +24,7 @@ private:
         uint16_t end_address;
     };
 
+    std::shared_mutex mutex_;
     std::map<uint16_t, DeviceDescriptor> device_map_;
 
     std::optional<DeviceDescriptor> FindDevice(uint16_t address);

@@ -1,0 +1,78 @@
+#include <cstdio>
+#include <string>
+
+#include "absl/flags/flag.h"
+#include "absl/flags/parse.h"
+#include "absl/flags/usage.h"
+#include "absl/status/status.h"
+#include "absl/strings/str_format.h"
+
+#include "bus.h"
+#include "cpu.h"
+#include "emulator.h"
+#include "memory.h"
+#include "null_device.h"
+
+ABSL_FLAG(std::string, rom_file, "", "ROM file path");
+
+const size_t kAddressSpace = 65536;
+const size_t kROMSize = 8192;
+const size_t kRAMSize = kAddressSpace - kROMSize;
+
+namespace emu {
+
+absl::Status RunEmulator(const std::string& rom_file) {
+    Memory rom(kROMSize, Memory::AccessMode::READONLY);
+    Memory ram(kRAMSize);
+
+    FILE* rom_fd = std::fopen(rom_file.c_str(), "rb");
+    if (!rom_fd) {
+        return absl::Status(
+            absl::StatusCode::kInvalidArgument,
+            absl::StrFormat("Could not open ROM file '%s': %s", rom_file, std::strerror(errno)));
+    }
+    rom.Load(rom_fd);
+    std::fclose(rom_fd);
+
+    Bus memory_bus;
+    memory_bus.Attach(&rom, 0x0000, kROMSize-1);
+    memory_bus.Attach(&ram, kROMSize, kAddressSpace-1);
+
+    NullDevice io_bus; // TODO: Add I/O bus.
+
+    Z80CPU cpu(&memory_bus, &io_bus);
+
+    Emulator emulator(&cpu);
+    emulator.RunBackground();
+
+    std::cout << "Running emulator..." << std::endl << "Press [Enter] to stop";
+    std::getchar();
+
+    emulator.Stop();
+
+    auto regs = cpu.Registers();
+    std::cout << "PC = " << regs.pc << std::endl;
+
+    return absl::OkStatus();
+}
+
+} // namespace emu
+
+int main(int argc, char* argv[]) {
+    absl::SetProgramUsageMessage("Hobgoblin 8-bit computer emulator.");
+    absl::ParseCommandLine(argc, argv);
+
+    const std::string rom_file = absl::GetFlag(FLAGS_rom_file);
+    if (rom_file.empty()) {
+        std::cerr << "Please specify ROM file via --rom_file" << std::endl;
+        return 1;
+    }
+
+    absl::Status status = emu::RunEmulator(rom_file);
+    if (!status.ok()) {
+        std::cerr << "emulator error: " << status << std::endl;
+        return 1;
+    }
+
+    return 0;
+}

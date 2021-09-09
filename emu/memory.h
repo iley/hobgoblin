@@ -2,6 +2,7 @@
 #define _HOBGOBLIN_EMU_MEMORY_H
 
 #include <cstdio>
+#include <shared_mutex>
 #include <vector>
 
 #include "device.h"
@@ -24,6 +25,7 @@ public:
     uint16_t Load(FILE* source, uint16_t offset=0);
 
 private:
+    std::shared_mutex mutex_;
     std::vector<uint8_t> data_;
     AccessMode mode_;
 };
