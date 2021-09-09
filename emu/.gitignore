@@ -2,7 +2,10 @@
 *.d
 emu
 *_test
+
 bazel-bin
 bazel-emu
 bazel-out
 bazel-testlogs
+
+basic.bin

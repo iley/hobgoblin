@@ -3,6 +3,11 @@ cc_binary(
     srcs = ["main.cc"],
     deps = [
         "@com_google_absl//absl/flags:flag",
+        "@com_google_absl//absl/flags:parse",
+        ":bus",
+        ":cpu",
+        ":memory",
+        ":null_device",
     ],
 )
 
