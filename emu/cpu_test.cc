@@ -1,5 +1,5 @@
 #define CATCH_CONFIG_MAIN
-#include "vendor/catch.hpp"
+#include "third_party/catch.hpp"
 
 #include "cpu.h"
 #include "memory.h"

@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-#include "vendor/z80.h"
+#include "third_party/z80.h"
 
 #include "device.h"
 
