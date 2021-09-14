@@ -6,6 +6,10 @@ namespace emu {
 
 Device::~Device() {}
 
+bool Device::InterruptRequested() {
+    return false;
+}
+
 void Device::WriteBlock(uint16_t address, std::vector<uint8_t> bytes) {
     assert(bytes.size() <= 0x10000);
     for (size_t i = 0; i < bytes.size(); i++) {

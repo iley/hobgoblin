@@ -10,6 +10,7 @@
 #include "bus.h"
 #include "cpu.h"
 #include "emulator.h"
+#include "mc6850.h"
 #include "memory.h"
 #include "null_device.h"
 
@@ -38,15 +39,32 @@ absl::Status RunEmulator(const std::string& rom_file) {
     memory_bus.Attach(&rom, 0x0000, kROMSize-1);
     memory_bus.Attach(&ram, kROMSize, kAddressSpace-1);
 
-    NullDevice io_bus; // TODO: Add I/O bus.
+    MC6850 serial;
+
+    Bus io_bus;
+    io_bus.Attach(&serial, 0x80, 0x81);
 
     Z80CPU cpu(&memory_bus, &io_bus);
+    cpu.AddInterruptSource(&serial);
 
     Emulator emulator(&cpu);
     emulator.RunBackground();
 
-    std::cout << "Running emulator..." << std::endl << "Press [Enter] to stop";
-    std::getchar();
+    // TODO: Figure out how to gracefully shut down this thread.
+    std::thread output_thread([&serial]() {
+        while (true) {
+            uint8_t ch = serial.Receive();
+            std::fputc(ch, stdout);
+        }
+    });
+
+    while (true) {
+        int ch = fgetc(stdin);
+        if (ch == EOF) {
+            break;
+        }
+        serial.Send(ch);
+    }
 
     emulator.Stop();
 

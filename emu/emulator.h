@@ -22,8 +22,8 @@ public:
 
 private:
     std::atomic<bool> stop_;
-    Z80CPU* cpu_;
     std::thread thread_;
+    Z80CPU* cpu_;
 };
 
 } // namespace emu

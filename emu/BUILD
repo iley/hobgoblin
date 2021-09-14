@@ -9,6 +9,7 @@ cc_binary(
         ":bus",
         ":cpu",
         ":emulator",
+        ":mc6850",
         ":memory",
         ":null_device",
     ],
@@ -88,5 +89,29 @@ cc_library(
     deps = [
         ":cpu",
         ":device",
+    ],
+)
+
+cc_library(
+    name = "mc6850",
+    hdrs = ["mc6850.h"],
+    srcs = ["mc6850.cc"],
+    deps = [
+        ":channel",
+        ":device",
+    ],
+)
+
+cc_library(
+    name = "channel",
+    hdrs = ["channel.h"],
+)
+
+cc_test(
+    name = "channel_test",
+    srcs = ["channel_test.cc"],
+    deps = [
+        "//third_party:catch",
+        ":channel",
     ],
 )

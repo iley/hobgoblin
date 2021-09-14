@@ -2,6 +2,7 @@
 #define _HOBGOBLIN_EMU_CPU_H
 
 #include <cstdint>
+#include <vector>
 
 #include "third_party/z80.h"
 
@@ -43,6 +44,7 @@ public:
     Z80CPU(Device* memory, Device* io);
     void Reset();
     uint32_t Exec(uint32_t ticks);  // Returns number of executed ticks.
+    void AddInterruptSource(InterruptSource* source);
 
     uint64_t TickCallback(int num_ticks, uint64_t pins);
 
@@ -52,6 +54,7 @@ private:
     z80_t z80_;
     Device* memory_;
     Device* io_;
+    std::vector<InterruptSource*> interrupt_sources_;
 };
 
 } // namespace emu

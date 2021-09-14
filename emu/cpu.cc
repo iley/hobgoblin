@@ -30,6 +30,10 @@ uint32_t Z80CPU::Exec(uint32_t ticks) {
     return z80_exec(&z80_, ticks);
 }
 
+void Z80CPU::AddInterruptSource(InterruptSource* source) {
+    interrupt_sources_.push_back(source);
+}
+
 uint64_t Z80CPU::TickCallback(int /*num_ticks*/, uint64_t pins) {
     if (pins & Z80_MREQ) {
         if (pins & Z80_RD) {
@@ -44,6 +48,13 @@ uint64_t Z80CPU::TickCallback(int /*num_ticks*/, uint64_t pins) {
             io_->Write(Z80_GET_ADDR(pins), Z80_GET_DATA(pins));
         }
     }
+
+    for (auto source : interrupt_sources_) {
+        if (source->InterruptRequested()) {
+            pins |= Z80_INT;
+        }
+    }
+
     return pins;
 }
 
