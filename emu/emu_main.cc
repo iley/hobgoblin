@@ -12,7 +12,6 @@
 #include "emulator.h"
 #include "mc6850.h"
 #include "memory.h"
-#include "null_device.h"
 
 ABSL_FLAG(std::string, rom_file, "", "ROM file path");
 

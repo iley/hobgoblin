@@ -11,7 +11,6 @@ cc_binary(
         ":emulator",
         ":mc6850",
         ":memory",
-        ":null_device",
     ],
 )
 

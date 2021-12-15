@@ -2,7 +2,7 @@
 
 namespace {
 
-const size_t kBufferSize = 1024;
+const size_t BUFFER_SIZE = 1024;
 
 const uint8_t CTRL_RECVIRQ = 0x80;
 
@@ -16,22 +16,20 @@ const uint8_t STATUS_IRQ = 0x80;
 namespace emu {
 
 MC6850::MC6850()
-    : input_channel_(kBufferSize)
-    , output_channel_(kBufferSize)
+    : input_channel_(BUFFER_SIZE)
+    , output_channel_(BUFFER_SIZE)
 {}
 
 void MC6850::Write(uint16_t address, uint8_t value) {
-    printf("write(%x, %x)\n", address, value);
-    if (address == 0) {
+    if (address == 0) { // Control
         SetControl(value);
-    } else if (address == 1) {
+    } else if (address == 1) { // Data
         output_channel_.Send(value);
     }
 }
 
 uint8_t MC6850::Read(uint16_t address) {
-    printf("read(%x)\n", address);
-    if (address == 0) {
+    if (address == 0) { // Status
         uint8_t control = Control();
         uint8_t status = STATUS_TDRE | STATUS_CTS;
         if (!input_channel_.Empty()) {
@@ -41,7 +39,7 @@ uint8_t MC6850::Read(uint16_t address) {
             }
         }
         return status;
-    } else if (address == 1) {
+    } else if (address == 1) { // Data
         auto value = input_channel_.TryReceive();
         if (!value) {
             return 0x00;
