@@ -2154,7 +2154,7 @@
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 8a2747cd-9545-4996-b99f-a27623db4e36)
     )
-    (fp_text value "CompactFlash" (at 10.39 0 90) (layer "F.SilkS")
+    (fp_text value "CompactFlash" (at 18 0 90) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 815e38da-4e8a-4d91-9c77-2aa0746d5639)
     )
@@ -4329,5 +4329,8 @@
   (gr_arc (start 22 135) (mid 20.585786 134.414214) (end 20 133) (layer "Edge.Cuts") (width 0.1) (tstamp 677579d4-4c45-40ac-8211-238aa194311e))
   (gr_arc (start 180 133) (mid 179.414214 134.414214) (end 178 135) (layer "Edge.Cuts") (width 0.1) (tstamp 9f381ade-5cf8-460b-8c59-530179d1ea93))
   (gr_arc (start 20 22) (mid 20.585786 20.585786) (end 22 20) (layer "Edge.Cuts") (width 0.1) (tstamp c0247d9e-4f78-4801-aed4-bf0567d851c0))
+  (gr_text "Hobgoblin Computer v2.0 Ilya Strukov 2022" (at 53.75 132.75) (layer "F.SilkS") (tstamp 7cfe3012-d9d9-46d5-83af-7486a7dbfc04)
+    (effects (font (size 1.5 1.5) (thickness 0.2)))
+  )
 
 )
