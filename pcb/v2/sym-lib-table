@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name "hobgoblin")(type "KiCad")(uri "/Users/ilya/projects/hobgoblin/pcb/lib/hobgoblin.kicad_sym")(options "")(descr ""))
+  (lib (name "hobgoblin_v1-rescue")(type "Legacy")(uri "/Users/ilya/projects/hobgoblin/pcb/v1/hobgoblin_v1-rescue.lib")(options "")(descr ""))
 )
