@@ -3020,7 +3020,6 @@
     )
   )
 
-
   (junction (at 135.89 161.29) (diameter 0) (color 0 0 0 0)
     (uuid 003974b6-cb8f-491b-a226-fc7891eb9a62)
   )
@@ -6116,7 +6115,7 @@
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005fec22e8)
     (property "Reference" "CF1" (id 0) (at 226.06 18.669 0))
-    (property "Value" "CF_Socket" (id 1) (at 226.06 20.9804 0))
+    (property "Value" "CompactFlash" (id 1) (at 226.06 20.9804 0))
     (property "Footprint" "hobgoblin:CF-Card_3M_N7E507516PK20" (id 2) (at 226.06 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -7061,7 +7060,7 @@
       (reference "C16") (unit 1) (value "0.1uF") (footprint "Capacitor_THT:C_Disc_D3.8mm_W2.6mm_P2.50mm")
     )
     (path "/00000000-0000-0000-0000-00005fec22e8"
-      (reference "CF1") (unit 1) (value "CF_Socket") (footprint "hobgoblin:CF-Card_3M_N7E507516PK20")
+      (reference "CF1") (unit 1) (value "CompactFlash") (footprint "hobgoblin:CF-Card_3M_N7E507516PK20")
     )
     (path "/00000000-0000-0000-0000-00005f8c4542"
       (reference "D1") (unit 1) (value "1N4148") (footprint "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal")

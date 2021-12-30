@@ -853,7 +853,7 @@
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads")
     (property "Sheetfile" "hobgoblin_v2.kicad_sch")
     (property "Sheetname" "")
-    (path "/00000000-0000-0000-0000-00005fccf79a")
+    (path "/00000000-0000-0000-0000-00005fb60818")
     (attr through_hole)
     (fp_text reference "U1" (at 3.81 -2.33) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
@@ -2150,11 +2150,11 @@
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005fec22e8")
     (attr smd)
-    (fp_text reference "CF1" (at 7.22 0 90) (layer "F.SilkS")
+    (fp_text reference "CF1" (at 7.22 0 90) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 8a2747cd-9545-4996-b99f-a27623db4e36)
     )
-    (fp_text value "CF_Socket" (at 10.39 0 90) (layer "F.Fab")
+    (fp_text value "CompactFlash" (at 10.39 0 90) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 815e38da-4e8a-4d91-9c77-2aa0746d5639)
     )
@@ -3491,7 +3491,7 @@
     (tags "THT DIP DIL PDIP 2.54mm 7.62mm 300mil LongPads")
     (property "Sheetfile" "hobgoblin_v2.kicad_sch")
     (property "Sheetname" "")
-    (path "/00000000-0000-0000-0000-00006002b138")
+    (path "/00000000-0000-0000-0000-00005f8c84ea")
     (attr through_hole)
     (fp_text reference "U2" (at 3.81 -2.33) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
