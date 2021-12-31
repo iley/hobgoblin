@@ -512,6 +512,10 @@
     (uuid ea7c53f9-3aa8-4198-9879-de95a5257915)
   )
 
+  (label "USB_VCC" (at 102.87 72.39 90)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 853bad48-62f1-43c6-895e-30d3976d0a58)
+  )
   (label "USBD-" (at 106.68 80.01 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c482f4f0-b441-4301-a9f1-c7f9e511d699)
